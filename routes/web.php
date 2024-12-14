@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\form;
+use App\Http\Controllers\arrayCon;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,11 +20,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/con', function () {
-    return view('Contact');
+Route::get('/data', function () {
+    return view('items');
 });
 
-Route::post('/condata',[form::class,('handleform')]);
+// Route::post('/condata',[form::class,('handleform')]);
+Route::get('/data',[arrayCon::class,('listitems')]);
 
 
 

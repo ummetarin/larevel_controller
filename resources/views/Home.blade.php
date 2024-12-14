@@ -1,3 +1,3 @@
 <h1>Home</h1>
 
-<a href={{url('/con')}}><h1>Contact Us</h1></a>
+<a href={{url('/data')}}><h1>Data</h1></a>
