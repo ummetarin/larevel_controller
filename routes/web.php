@@ -1,10 +1,8 @@
 <?php
 
+use App\Http\Controllers\form;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\About;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\Data;
-use App\Http\Controllers\FormController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,24 +16,15 @@ use App\Http\Controllers\FormController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home');
 });
-Route::get('/about',[About::class,'showabout']);
-// Route::get('con',[ContactController::class,'showcontact']);
 
-// Route::get('/da', function () {
-//     return view('Data');
-// });
+
 Route::get('/con', function () {
-    return view('form');
-});
-Route::post('/submit',[FormController::class,'handleform']);
-
-Route::get('/data',function(){
-   return view('Data');
+    return view('Contact');
 });
 
-Route::post('/dataset',[Data::class,"handledata"]);
+Route::post('/condata',[form::class,('handleform')]);
 
 
 
