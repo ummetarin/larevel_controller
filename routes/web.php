@@ -24,6 +24,12 @@ Route::get('/data', function () {
     return view('items');
 });
 
+Route::get('/blood', function () {
+    return view('Blood');
+});
+
+
+
 // Route::post('/condata',[form::class,('handleform')]);
 Route::get('/data',[arrayCon::class,('listitems')]);
 
